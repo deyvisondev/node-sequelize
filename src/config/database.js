@@ -1,9 +1,11 @@
+require('dotenv/config')
+
 module.exports = {
     dialect: 'postgres',
-    host: 'node-rocketseat.cr4ifeqfib7e.us-east-1.rds.amazonaws.com',
-    username: 'm_u_postgres_u',
-    password: 'tqXwbXZ5FfHligUV',
-    database: 'dev_sequelize',
+    host: process.env.DB_HOST,
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
     define: {
         timestamps: true,
         underscored: true,
